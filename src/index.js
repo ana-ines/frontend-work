@@ -12,10 +12,10 @@ const epics = combineEpics(fetchDiskEpic, fetchDiskByNameEpic);
 const epicMiddleware = createEpicMiddleware(epics);
 
 const store = createStore(
-	reducer,
-	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-	applyMiddleware(epicMiddleware)
-);
+								reducer,
+								window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+								applyMiddleware(epicMiddleware)
+							)
 
 render(<Provider store={ store }>
 				<App />
